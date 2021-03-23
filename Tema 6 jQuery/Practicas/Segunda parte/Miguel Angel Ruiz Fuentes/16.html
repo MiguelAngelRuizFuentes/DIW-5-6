@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+        /*16. Mediante tres eventos asociados a tres botones, “SetText”, “SetHTML” y “SetValue” establecer el
+        texto de un primer párrafo a “Hola Mundo”, establecer el texto de un segundo párrafo a “Hola
+        Mundo” en negrita y establecer el valor de un cuadro de texto a “Hola Mundo”.*/
+        $(document).ready(function(){
+            $("#boton1").click(function(){$("p:first").text("Hola Mundo")});
+            $("#boton2").click(function(){$("p:last").html("<b>Hola Mundo</b>")});
+            $("#boton3").click(function(){$("input[type='text']").val("Hpola Mundo") });
+        })
+</script>
+<body>
+        <h1 class="intro">Ejercicio 16</h1>
+        <div id="main">
+        <button id="boton1">Set Text</button>
+        <button id="boton2">Set HTML</button>
+        <button id="boton3">Set Value</button>
+        <hr />
+            <p></p>
+            <p></p>
+            <input type="text">
+        </div>
+</body>
+</html>

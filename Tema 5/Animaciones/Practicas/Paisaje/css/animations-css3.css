@@ -1,0 +1,150 @@
+body {
+    font-family: Comic Sans MS, sans-serif;
+}
+
+div#contenedor {
+    width: 950px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+}
+
+div#animation {
+    width: 950px;
+    height: 500px;
+    background: url("../img/background.png") no-repeat left top;
+    position: absolute;
+    box-shadow: 0 0 15px #000;
+    overflow: hidden;
+}
+
+div#cloud {
+    width: 200px;
+    height: 75px;
+    background-image: url("../img/cloud.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    left: -200px;
+    z-index: 10;
+    /*===========================================================*/
+    animation-name: cloud-animation;
+    animation-duration: 20s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    /*===========================================================*/
+}
+
+div#rain {
+    width: 200px;
+    height: 400px;
+    background-image: url("../img/rain-background.png");
+    background-repeat: no-repeat;
+    margin: 65px 0 0 0;
+    position: absolute;
+    top: 450px;
+    z-index: 1;
+    /*===========================================================*/
+    animation-name: rain-animation;
+    animation-duration: 10s;
+    animation-delay: 5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-duration: normal;
+    /*===========================================================*/
+}
+
+div#sun {
+    background: url("../img/sun.png") no-repeat top left;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 20px;
+    left: 700px;
+    /*===========================================================*/
+    animation-name: sun-animation;
+    animation-duration: 20s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-duration: normal;
+    /*===========================================================*/
+}
+
+div#flower {
+    width: 90px;
+    height: 130px;
+    background-image: url("../img/flower.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 500px;
+    left: 430px;
+    /*===========================================================*/
+    animation-name: flower-animation;
+    animation-duration: 5s;
+    animation-delay: 20s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-duration: normal;
+    animation-fill-mode: forwards;
+    /*===========================================================*/
+}
+
+@keyframes cloud-animation {
+    /*Segundo 0*/
+    0% {
+        left: 950px;
+    }
+    /*Segundo 5*/
+    25% {
+        left: 375px;
+    }
+    /*Segundo 15*/
+    75% {
+        left: 375px;
+    }
+    /*Segundo 20*/
+    100% {
+        left: -200px;
+    }
+}
+
+@keyframes rain-animation {
+    /*Segundo 5*/
+    0% {
+        top: -450px;
+    }
+    /*Segundo 15*/
+    100% {
+        top: 450px;
+    }
+}
+
+@keyframes sun-animation {
+    /*Segundo 0*/
+    0% {
+        opacity: 1;
+    }
+    /*Segundo 5*/
+    25% {
+        opacity: 0.25;
+    }
+    /*Segundo 15*/
+    75% {
+        opacity: 0.25;
+    }
+    /*Segundo 20*/
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes flower-animation {
+    /* Segundo 20, se controla mediante un delay de 20s y dura 5 segundos */
+    100% {
+        top: 370px;
+    }
+}

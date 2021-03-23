@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+p {background:#33CC99; }
+
+.intro { background-color: red; }
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready( function(){
+
+	$('#botontarget').on("click", function(){
+		$("a[target = '_blank']").hide();
+	});
+	
+	
+	$('#boton').on("click", function(){
+		$("a:not([target = '_blank'])").hide();
+	});
+
+});
+</script>
+</head>
+<body>
+<h1 class="intro">Ejercicio 8</h1>
+
+<h2>Enlace uno con href y target:</h2>
+<a href="http://www.google.com" target="_blank">Google</a>
+<button id="botontarget">Borrar enlace target</button>
+<h2>Enlace dos con href:</h2>
+<a href="http://www.gmail.com">Gmail</a>
+<button id="boton">Borrar enlace sin target</button>
+<h2>Enlace tres con name:</h2>
+<a name="ancla">Ancla</a>
+<br>
+
+
+
+
+</body>
+</html>

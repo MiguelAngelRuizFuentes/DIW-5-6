@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Ejercicio 5</title>
+</head>
+
+<body>
+    <br>
+    <input type="file" id="nuevoVideo"><br>
+    <button onclick="insertVideo()">Añadir Video</button>
+    <div id="listavid">
+        <h4>Lista de videos</h4>
+        <ul id="lista">
+        </ul>
+    </div>
+    <br>
+    <button onclick="iniciar();">Reproducir</button>
+    <br>
+    <div id="seccionVideo">
+        <video controls="controls" id="video">
+
+    </video>
+    </div>
+    <br>
+    <script>
+        var current = 0;
+        var video = document.getElementById("mi_video");
+
+        function insertVideo() {
+
+            var nuevaruta = document.getElementById("nuevoVideo").files[0].name;
+            var li = document.createElement("li");
+            li.innerHTML = nuevaruta;
+            document.getElementById("lista").appendChild(li);
+
+        }
+
+        function iniciar() {
+            var videos = document.getElementsByTagName('li');
+            var video = document.getElementById("video");
+            video.setAttribute('src', videos[current].firstChild.nodeValue);
+            video.play();
+        }
+
+        video.addEventListener('ended', videoEnded, false);
+
+        function videoEnded() {
+            current++;
+            iniciar();
+        }
+    </script>
+
+</body>
+
+</html>

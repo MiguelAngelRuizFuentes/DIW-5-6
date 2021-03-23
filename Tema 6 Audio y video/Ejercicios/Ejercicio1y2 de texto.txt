@@ -1,0 +1,10 @@
+1.
+Señala las características que determinan la calidad de un fichero de audio y de video.
+
+Los canales, la frecuencia de muestreo, el tamaño de la muestra y el bitrate.
+
+
+2.
+Señala las diferencias entre audio mp3 y wav. 
+
+La principal diferencia es que el wav se suele usar sin compresión de datos.

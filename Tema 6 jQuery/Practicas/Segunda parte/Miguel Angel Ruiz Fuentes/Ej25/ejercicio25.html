@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Introducing Events</title>
+<link href="_css/site.css" rel="stylesheet">
+<script
+  src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+  crossorigin="anonymous"></script>
+<script>
+$( function() {
+	$('form').submit(function(evt){
+		evt.preventDefault();
+	}); // end submit
+	
+	
+	$('#button').click(function() {
+		var field = $('#textfield');
+		var fieldVal = field.val();
+		if (fieldVal) { 
+			$('#tasklist').append('<li>' + fieldVal + '</li>' );
+			field.val('');
+			field.focus();
+		}
+	})// end click
+	
+	
+	$('#textfield').keypress(function(evento) {
+			if (evento.which == 13) //he pulsado la tecla enter
+			{
+					/*var $field = $('#textfield')
+					var fieldVal = $field.val();
+					if (fieldVal) { 
+							$('#tasklist').append('<li>' + fieldVal + '</li>' );
+							$field.val('');
+							$field.focus();
+					}*/
+					$("#button").trigger("click");
+			}
+	})// end keypress
+    
+
+//EJEMPLO NO VÁLIDO
+	$("li").click(function(){
+		console.log($(this));
+		$(this).css({
+			'text-decoration' : 'line-through',
+			'font-weight' : 'bold',
+			'color' : 'lightgrey'
+		}); // end css	
+	
+	});
+		
+		
+	/*$('#tasklist').on('click','li',function() {
+		console.log($(this));
+		$(this).css({
+			'text-decoration' : 'line-through',
+			'font-weight' : 'bold',
+			'color' : 'lightgrey'
+		}); // end css
+	}); // end on*/
+
+
+
+});
+</script>
+</head>
+<body id="events">
+<div class="wrapper">
+	<div class="content">
+		<div class="main">
+			<form action="#" method="get">
+		<p>
+			<input name="textfield" type="text" id="textfield"> 
+			<input name="button" type="button" id="button" value="Add Task"></p>
+		</form>
+		<h1>Agenda</h1>
+		<ul id="tasklist">
+
+		</ul>
+		</div>
+	</div>
+</div>
+</body>
+</html>

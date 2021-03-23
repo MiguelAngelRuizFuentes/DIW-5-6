@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+p{
+	padding: 10px;
+	border: solid 1px #000;
+}
+.intro { background-color: red; }
+
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready( function(){
+
+	$('input[type=text]').on("focus", function(e){
+			$(this).val("Ganado el foco").css("background-color", "#F6D8CE");
+	});
+		
+	$('input[type=text]').on("blur", function(e){
+		$(this).val("Saliendo del texto").css("background-color", "#A9BCF5");;
+	});
+
+});
+</script>
+</head>
+<body>
+<h1 class="intro">Ejercicio 13</h1>
+<input type="text" id="texto1">
+<input type="text" id="texto2">
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+        div{
+            background-color:yellow; 
+        }
+        </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+        /*18. Crea una capa cuadrada (100 x 300 en amarillo) que contenga un par de párrafos. Borra dicha capa
+        con el método remove() como gestor de un evento asociado a un botón.*/
+        $(document).ready(function(){
+            $("#boton").click(function(){$("div:has(p)").remove()});
+
+        })
+</script>
+<body>
+        <button id="boton">Boton</button>
+        <div>
+            <p>Hola</p>
+            <p>Adios</p>
+
+        </div>
+</body>
+</html>

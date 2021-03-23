@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+p{
+	padding: 10px;
+	border: solid 1px #000;
+}
+.intro { background-color: red; }
+
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready( function(){
+
+	$('p').on("dblclick", function(e){
+		e.preventDefault();  //Evito que marque las palabras
+		$(this).hide();
+	});
+
+});
+</script>
+</head>
+<body>
+<h1 class="intro">Ejercicio 10</h1>
+<p> 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum vel sem ac pharetra. Donec et tortor ipsum. Cras bibendum magna sit amet nisl ultricies molestie. Ut tempus pulvinar ex, non accumsan augue feugiat sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a pretium nibh. Donec quis pulvinar lacus, a lacinia felis. Proin ornare volutpat cursus. Nunc sollicitudin urna ut eros mollis, iaculis auctor orci varius. Morbi ut lorem enim. Fusce ante justo, porta a pulvinar sed, efficitur id sapien. Proin sed risus velit.
+<br>
+Pellentesque eleifend tortor nulla, eu hendrerit dolor consequat id. Cras enim sapien, finibus tempor erat nec, ultrices tincidunt augue. Aenean auctor libero augue, vel faucibus turpis lobortis at. Integer sit amet sem sagittis, euismod neque ut, molestie metus. Donec in ultrices tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce egestas dapibus nibh, quis commodo tellus.
+<br>
+Vivamus semper sapien sed ultrices posuere. Ut consectetur quis turpis eget aliquet. Suspendisse ullamcorper libero vel enim varius, sit amet fermentum est lobortis. Nam fringilla vehicula pretium. Phasellus accumsan mi eget arcu ultrices, sollicitudin sodales enim imperdiet. Ut imperdiet elit nisi, ut interdum felis fringilla ac. Ut eu elit tincidunt, finibus turpis id, viverra velit. Maecenas felis leo, consectetur eget feugiat et, tristique vel est. In pretium, nibh non hendrerit venenatis, lorem nisl tristique elit, non consectetur elit dui in velit. 
+</p>
+
+
+</body>
+</html>

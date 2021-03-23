@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio 22</title>
+  <style>
+
+	.intro { background-color: red; }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+<h1 class="intro">Ejercicio 22</h1>
+<p>Implementar un cuadro de texto que responde a un evento personalizado llamado mostrar 
+que lanza una alerta con su contenido ("alert(this.value)"). Disparar dicho evento al 
+hacer clic en un botón.</p>
+
+<form id="formulario" type="post" action="#">
+<input type="text" id="texto" value="Valor incial">
+<button id="disparador">Muestra el valor del campo de texto</button>
+</form>
+
+ 
+<script>
+$( "#texto" ).on( "muestraTexto", function( event, info ) {
+	alert("El contenido del campo de texto es " + $(this).val() + 
+	      " y esta es la información asociada " + info);
+});
+$( "#disparador" ).click(function () {
+  $( "#texto" ).trigger( "muestraTexto", [ "Info asociada" ] );
+});
+</script>
+ 
+</body>
+</html>

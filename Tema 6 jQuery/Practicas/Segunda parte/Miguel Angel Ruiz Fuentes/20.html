@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+        div{
+            background-color:yellow; 
+        }
+        </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+        /*20. Crear un documento con un par de párrafos y un botón. Al clicar en los párrafos se debe aumentar
+        el tamaño de la letra y el espacio entre caracteres. Al clicar en el botón se debe destruir el anterior
+        evento clicar y su función asociada de aumentar el tamaño de la letra.*/
+        $(document).ready(function(){
+            $("p").click(function(){$(this).css("font-size","+=5") });
+            $("#boton").click(function(){
+                $("p").remove()
+            });
+
+        })
+</script>
+<body>
+        <button id="boton">Boton</button>
+        <div>
+            <p>Hola amigo como estas</p>
+            <p>Adios, nos vemos mañana</p>
+
+        </div>
+</body>
+</html>

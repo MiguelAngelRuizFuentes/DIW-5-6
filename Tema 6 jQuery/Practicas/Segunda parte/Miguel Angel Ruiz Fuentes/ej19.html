@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+div{
+	padding: 10px;
+	margin: 10px;
+	border: solid 1px #000;
+	background-color: #ecdad6; 
+}
+
+.intro { background-color: red; }
+
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready( function(){
+
+	$('div').on({
+		'click': 	function() { 
+						$('p').slideToggle(); 
+					},
+		'mouseover':function() { 
+						$(this).css("background-color", "blue"); 
+					},
+		'mouseout':	function() { 
+						$(this).css("background-color", "red"); 
+					}
+					
+	});
+
+	
+	
+
+});
+</script>
+</head>
+<body>
+<h1 class="intro">Ejercicio 19</h1>
+<div id="main">
+	<p>
+		<i>"Tres anillos para los Reyes Elfos bajo el cielo. Siete para los <b>Señores Enanos</b> en casas de piedra. 
+	    Nueve para los Hombres Mortales condenados a morir. Uno para el Señor Oscuro, sobre el trono oscuro. 
+		Un <b>Anillo</b> para gobernarlos a todos. Un anillo para encontrarlos, un Anillo para atraerlos a todos y 
+		atarlos en las tinieblas en la Tierra de Mordor donde se extienden las Sombras."</i>
+	</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+        /*17. Cambia los atributos href y title de un enlace a Google, mediante un evento asociado a un botón.
+        Ahora href=”http://www.google.es/intl/es/earth/index.html” y el título será “Google Earth”*/
+        $(document).ready(function(){
+            $("#boton").click(function(){
+                $("a").text("Google Earth");
+                $("a").attr("href","http://www.google.es/intl/es/earth/index.html");
+            });
+
+        })
+</script>
+<body>
+        <button id="boton">Boton</button>
+        <a href="http://www.google.es">Google</a>
+</body>
+</html>

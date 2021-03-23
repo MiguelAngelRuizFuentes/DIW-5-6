@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+div{
+	padding: 10px;
+	margin: 10px;
+	border: solid 1px #000;
+	background-color: #ecdad6; 
+}
+
+.intro { background-color: red; }
+
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready( function(){
+
+	$('#boton1').on("click", function(e){
+		alert( $('p').text() );
+	});
+	
+	$('#boton2').on("click", function(e){
+		alert($('p').html());
+	});
+	
+	$('#boton3').on("click", function(e){
+		alert( $('input[type=text]').val() );
+	});
+	
+	$('#boton4').on("click", function(e){
+		alert( "Texto: '" + $('a').text() + "' apuntando a " + $('a').attr('href') );
+	});
+
+});
+</script>
+</head>
+<body>
+<h1 class="intro">Ejercicio 15</h1>
+<div id="main">
+<button id="boton1">Contenido párrafo</button>
+<button id="boton2">Contenido párrafo con html</button>
+<button id="boton3">Valor del cuadro de texto</button>
+<button id="boton4">Contenido del enlace</button>
+<hr />
+<input type="text" value="valor inicial">
+<hr />
+<a href="http://www.thehobbit.com">Enlace a The Hobbit</a>
+
+	<p>
+		<i>"Tres anillos para los Reyes Elfos bajo el cielo. Siete para los <b>Señores Enanos</b> en casas de piedra. 
+	    Nueve para los Hombres Mortales condenados a morir. Uno para el Señor Oscuro, sobre el trono oscuro. 
+		Un <b>Anillo</b> para gobernarlos a todos. Un anillo para encontrarlos, un Anillo para atraerlos a todos y 
+		atarlos en las tinieblas en la Tierra de Mordor donde se extienden las Sombras."</i>
+	</p>
+</div>
+
+</body>
+</html>
